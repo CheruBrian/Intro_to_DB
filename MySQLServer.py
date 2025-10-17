@@ -41,7 +41,7 @@ def create_database(host='localhost', user='root', password=''):
     except Error as e:
         print(f"Error: {e}")
         print("Failed to connect to MySQL server")
-        print("Please check your MySQL credentials and ensure the server is running")
+        print("except mysql.connector.Error")
     finally:
         # Close connection properly
         if connection and connection.is_connected():
@@ -64,3 +64,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
